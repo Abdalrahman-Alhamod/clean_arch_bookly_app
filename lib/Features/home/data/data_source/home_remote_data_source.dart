@@ -35,6 +35,8 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
 
     List<BookEntity> books = getBooksList(data);
 
+    saveBooksData(books, kNewestBox);
+
     return books;
   }
 
