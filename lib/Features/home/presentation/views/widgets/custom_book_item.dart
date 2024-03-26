@@ -1,3 +1,5 @@
+import 'package:bookly/Features/home/presentation/views/widgets/custom_book_image_loading_indicator.dart';
+import 'package:bookly/core/utils/custom_fading_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +13,11 @@ class CustomBookImage extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(16),
         child: CachedNetworkImage(
+          placeholder: (context, url) {
+            return const CustomFadingWidget(
+              child: CustomBookImageLoadingIndicator(),
+            );
+          },
           imageUrl: image,
           fit: BoxFit.fill,
         ),
