@@ -1,3 +1,4 @@
+import 'package:bookly/Features/home/domain/entities/book_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -7,7 +8,9 @@ class BookRating extends StatelessWidget {
   const BookRating({
     super.key,
     this.mainAxisAlignment = MainAxisAlignment.start,
+    required this.bookEntity,
   });
+  final BookEntity bookEntity;
 
   final MainAxisAlignment mainAxisAlignment;
   @override
@@ -23,8 +26,8 @@ class BookRating extends StatelessWidget {
         const SizedBox(
           width: 6.3,
         ),
-        const Text(
-          '4.8',
+        Text(
+          bookEntity.rating != null ? bookEntity.rating.toString() : '0',
           style: Styles.textStyle16,
         ),
         const SizedBox(

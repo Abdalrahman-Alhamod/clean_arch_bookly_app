@@ -26,9 +26,8 @@ class BookModel extends BookEntity {
             image: volumeInfo!.imageLinks?.thumbnail ?? '',
             title: volumeInfo.title!,
             authorName: volumeInfo.authors?.first,
-            price: 0.0,
-            rating: volumeInfo.averageRating
-            );
+            price: 12.99,
+            rating: volumeInfo.averageRating);
 
   @override
   String toString() {

@@ -2,7 +2,7 @@ import 'package:bookly/Features/home/presentation/views/widgets/featured_books_l
 import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'best_seller_list_view.dart';
+import 'best_seller_list_view_bloc.dart';
 import 'custom_app_bar.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -43,7 +43,7 @@ class HomeViewBody extends StatelessWidget {
         SliverToBoxAdapter(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
-            child: BestSellerListView(),
+            child: BestSellerListViewBloc(),
           ),
         ),
       ],
